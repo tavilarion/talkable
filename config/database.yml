@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("POSTGRES_USER") { 'root' } %>
+  password: <%= ENV.fetch("POSTGRES_PASS") { 'password' } %>
+  host: <%= ENV.fetch("POSTGRES_HOST") { 'postgres' } %>
+  port: <%= ENV.fetch("POSTGRES_PORT") { 3306 } %>
+
+development:
+  <<: *default
+  database: talkable_development
+
+test:
+  <<: *default
+  database: talkable_test
+
+production:
+  <<: *default
+  database: talkable_production

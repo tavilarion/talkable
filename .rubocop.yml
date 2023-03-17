@@ -1,0 +1,16 @@
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - spec/**/*
+    - Gemfile
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 150
