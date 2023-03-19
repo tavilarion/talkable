@@ -1,0 +1,5 @@
+<%= turbo_stream.prepend 'comments' do %>
+  <%= render @comment %>
+<% end %>
+
+<%= turbo_stream.update 'edit_project', partial: "projects/status", locals: { project: @project } %>

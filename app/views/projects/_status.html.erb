@@ -1,0 +1,6 @@
+<div class="pt-12 border-t dark:border-gray-700 flex items-center justify-between mt-8">
+  <span class="text-lg font-semibold">Status: <%= project.status %></span>
+  <%= link_to "Edit",
+              edit_project_path(project),
+              class: "px-2 py-1 font-bold rounded dark:bg-violet-400 dark:text-gray-900" %>
+</div>

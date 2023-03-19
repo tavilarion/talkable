@@ -8,6 +8,7 @@ AllCops:
     - db/**/*
     - spec/**/*
     - Gemfile
+    - lib/tasks/*
 
 Style/Documentation:
   Enabled: false

@@ -1,0 +1,10 @@
+<%= turbo_frame_tag 'edit_project' do %>
+  <%= form_with model: @project do |f| %>
+    <div class="pt-12 border-t dark:border-gray-700 flex items-center justify-between mt-8">
+      <span class='text-gray-900'>
+        <%= f.select :status, options_for_select(Project::STATUSES.invert) %>
+      </span>
+      <%= f.submit "Confirm", class: "px-2 py-1 font-bold rounded dark:bg-violet-400 dark:text-gray-900" %>
+    </div>
+  <% end %>
+<% end %>

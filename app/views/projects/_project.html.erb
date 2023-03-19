@@ -1,0 +1,16 @@
+<section class="mb-8 text-gray-800 rounded-lg shadow-sm dark:bg-gray-900 px-10 py-6">
+  <div class="flex items-center justify-between">
+    <span class="text-sm dark:text-gray-400"><%= project.created_at&.strftime("%B %-d, %Y") %></span>
+  </div>
+
+  <div class="mt-3 text-slate-300">
+    <%= link_to project.name, project, class: 'text-2xl font-bold hover:underline' %>
+    <p class="mt-2">
+      <%= project.description&.truncate(250) %>...
+    </p>
+  </div>
+
+  <div class="flex items-center justify-between mt-4">
+    <%= link_to 'View', project, class: 'hover:underline dark:text-violet-400' %>
+  </div>
+</section>

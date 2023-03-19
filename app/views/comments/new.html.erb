@@ -1,0 +1,5 @@
+<%= turbo_frame_tag 'new_comment' do %>
+  <div class="pt-12 border-t dark:border-gray-700 mt-8">
+    <%= render 'form', comment: @comment, project: @project %>
+  </div>
+<% end %>
